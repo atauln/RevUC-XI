@@ -8,7 +8,6 @@ import javax.sound.sampled.*;
 import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
-import java.util.Objects;
 
 import static jm.constants.Durations.CROTCHET;
 
@@ -67,7 +66,7 @@ public class AudioManager {
     public Note[] parseFFT(File file) {
         FFTResult fft  = null;
         try {
-            QuiFFT quiFFT = new QuiFFT(file).windowOverlap(0).numPoints((int) Math.pow(2, 14));
+            QuiFFT quiFFT = new QuiFFT(file).windowOverlap(0).numPoints((int) Math.pow(2, 17));
             fft = quiFFT.fullFFT();
         } catch (IOException e) {
             System.out.println("An I/O exception occurred while QuiFFT was opening an input stream to the audio file");

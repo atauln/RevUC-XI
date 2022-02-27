@@ -69,7 +69,7 @@ public class MusicParser {
             }
         }
 
-        for (int i=0; i < condensedNotes.length; i++) {
+        for (int i=0; i < condensedNotes.length - 1; i++) {
             Note n = (Note) condensedNotes[i][0];
             if (n == null || condensedNotes[i+1][0] == null) {
                 break;
